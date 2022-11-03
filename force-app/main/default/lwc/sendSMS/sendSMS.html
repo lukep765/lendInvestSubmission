@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title = 'Send SMS' >
+        <div class = slds-var-m-left_x-small >
+            <p><lightning-formatted-phone 
+                label = 'Account Phone'
+                value={phone}>
+            </lightning-formatted-phone></p>
+        </div>
+        <div class = slds-var-m-left_x-small>
+            <lightning-textarea 
+                name="SendSMS" 
+                label="Send SMS" 
+                placeholder="type SMS to message here..."
+                disabled={disabled}
+                >
+            </lightning-textarea>
+        </div>
+        <div>
+            <lightning-button
+                class="slds-var-m-left_x-small"
+                variant="Brand"
+                name="send"
+                label="Send"
+                onclick={handleSend}
+                disabled={disabled}
+            >
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
